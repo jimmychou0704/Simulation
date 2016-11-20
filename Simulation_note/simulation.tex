@@ -1,0 +1,79 @@
+%-----------------------------------------------------------------------------
+% Beginning of journal.tex
+%------------------------------------------------------------------------------
+%
+% AMS-LaTeX version 2 sample file for journals, based on amsart.cls.
+%
+%        ***     DO NOT USE THIS FILE AS A STARTER.      ***
+%        ***  USE THE JOURNAL-SPECIFIC *.TEMPLATE FILE.  ***
+%
+% Replace amsart by the documentclass for the target journal, e.g., tran-l.
+
+
+
+\documentclass[12pt]{amsart}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amscd}
+\usepackage{mathrsfs}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{subfig}
+
+
+\usepackage[all, cmtip]{xy}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{xca}[theorem]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{akn}[theorem]{Acknowledgments}
+\newtheorem{assumption}[theorem]{Assumption}
+
+
+\begin{document}
+\allowdisplaybreaks
+\title{Simulation}
+\maketitle
+
+
+\section{Inverse Method}
+
+\begin{proposition}
+For any distribution function $F(\cdot)$, uniform random variable $u \sim U(0,1)$. The random variable 
+\begin{equation*}
+X = F^{-1}(u)
+\end{equation*} 
+has distribution $F$.
+\end{proposition}
+
+\begin{example}
+Suppose we want to generate  an exponential random variable $X$ with $\lambda = 1$.
+Since $F(x) = 1 - e^{-x}$. We just need to generate $u$ from $U(0,1)$ then let 
+\begin{equation*}
+x = -ln(1-u).
+\end{equation*}
+\end{example}
+
+
+
+
+
+
+\end{document}
